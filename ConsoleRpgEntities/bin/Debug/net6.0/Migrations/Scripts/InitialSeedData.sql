@@ -1,7 +1,7 @@
 ﻿SET IDENTITY_INSERT Players ON;
 INSERT INTO Players (Id, Name, Health, Experience)
 VALUES
-    (1, 'Sir Lancelot', 100, 0);
+    (1, 'Sir Lancelot', 1000, 0);
 SET IDENTITY_INSERT Players OFF;
 
 SET IDENTITY_INSERT Monsters ON;

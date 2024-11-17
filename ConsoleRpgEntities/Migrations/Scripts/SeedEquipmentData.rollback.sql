@@ -1,0 +1,2 @@
+﻿DELETE FROM Item;
+DELETE FROM Equipment;

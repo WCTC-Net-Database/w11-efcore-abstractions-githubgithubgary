@@ -1,8 +1,10 @@
 ﻿using ConsoleRpg.Helpers;
 using ConsoleRpgEntities.Data;
+using ConsoleRpgEntities.Items;
 using ConsoleRpgEntities.Models.Attributes;
 using ConsoleRpgEntities.Models.Characters;
 using ConsoleRpgEntities.Models.Characters.Monsters;
+using System.Xml.Linq;
 
 namespace ConsoleRpg.Services;
 
@@ -68,6 +70,16 @@ public class GameEngine
             _player.Attack(targetableGoblin);
             _player.UseAbility(_player.Abilities.First(), targetableGoblin);
         }
+        Random random = new Random();
+        if (random.Next(0, 2) == 1)
+        {
+            if (_player is ITargetable targetablePlayer)
+            {
+                _goblin.Attack(targetablePlayer);
+            }
+        }
+        // Was not sure if this was the correct place to do this but it works.
+        _context.SaveChanges();
     }
 
     private void SetupGame()

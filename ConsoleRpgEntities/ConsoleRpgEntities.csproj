@@ -21,11 +21,19 @@
   <ItemGroup>
     <None Remove="Migrations\Scripts\InitialSeedData.rollback.sql" />
     <None Remove="Migrations\Scripts\InitialSeedData.sql" />
+    <None Remove="Migrations\Scripts\SeedEquipmentData.rollback.sql" />
+    <None Remove="Migrations\Scripts\SeedEquipmentData.sql" />
     <None Remove="Models\Abilities\Ability.cs~RF7a28a58b.TMP" />
     <None Remove="Models\Attributes\ITargetable.cs~RF7fb34c69.TMP" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Migrations\Scripts\SeedEquipmentData.rollback.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\SeedEquipmentData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Migrations\Scripts\InitialSeedData.rollback.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
